@@ -15,7 +15,7 @@ export function Footer(){
 export function Welcome(props) {
   return (
     <div>
-      <h1>Welcome, {props.name}!</h1>
+      <h3>Welcome, {props.name}!</h3>
       <p>This is your first React component 🎉</p>
     </div>
   );

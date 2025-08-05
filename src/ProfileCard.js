@@ -1,6 +1,7 @@
 import React from 'react';
 
 function ProfileCard({ name, age, city }) {
+    const [showDetails, setShowDetails] = React.useState(false);
     return (
         <div style={{
             border: '1px solid #ccc',
@@ -9,10 +10,17 @@ function ProfileCard({ name, age, city }) {
             maxWidth: '300px',
             boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
         }}>
+            
             <h2>{name}</h2>
+            { showDetails &&(<>
             <p><strong>Age:</strong> {age}</p>
             <p><strong>City:</strong> {city}</p>
-        </div>
+            </>)
+            }
+        <button onClick={() => setShowDetails(!showDetails)}>
+            {showDetails ? "Hide Details" : "Show Details"}
+        </button>
+                    </div>
     );
 }
 
