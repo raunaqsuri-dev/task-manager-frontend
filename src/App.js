@@ -1,25 +1,57 @@
 import logo from './logo.svg';
 import './App.css';
+// import Welcome from "./Welcome"; // ✅ Correct import
+// import Header from "./Welcome";
+// import Footer from "./Welcome";
+import { Welcome, Header, Footer } from "./Welcome";
+import ProfileCard from "./ProfileCard";
+import DateInfo from './DateInfo';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <Welcome name="Raunaq" />
+      <Welcome name="React Learner" />
+      <DateInfo/>
+
+      <ProfileCard name="Raunaq" age={25} city="New York" />
+      <ProfileCard name="Alice" age={30} city="Los Angeles" />
+      <ProfileCard name="Bob" age={28} city="Chicago" />
+
+      <Footer/>
     </div>
   );
 }
 
 export default App;
+
+// function App() {
+//   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+//   function handleLogin() {
+//     setIsLoggedIn(true);
+//   }
+
+//   function handleLogout() {
+//     setIsLoggedIn(false);
+//   }
+
+//   return (
+//     <div>
+//       {isLoggedIn ? (
+//         <LogoutButton onClick={handleLogout} />
+//       ) : (
+//         <LoginButton onClick={handleLogin} />
+//       )}
+//     </div>
+//   );
+// }
+
+// function LoginButton({ onClick }) {
+//   return <button onClick={onClick}>Log In</button>;
+// }
+
+// function LogoutButton({ onClick }) {
+//   return <button onClick={onClick}>Log Out</button>;
+// }
