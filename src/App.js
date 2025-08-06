@@ -11,6 +11,7 @@ import ToggleMessage from "./ToggleMessage";
 import FruitList from "./FruitList";  
 import NameForm from "./NameForm";
 import TaskManager from "./TaskManager"; // Assuming TaskManager is a component in your project   
+import LoginForm from "./LoginForm"
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <FruitList />
       <NameForm />
       <TaskManager />
+      <LoginForm/>
 
       {/* <Welcome name="React Learner" /> */}
       <DateInfo />
